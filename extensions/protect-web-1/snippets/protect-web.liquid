@@ -1,0 +1,30 @@
+<script>
+// Блокировка контекстного меню
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
+
+// Блокировка клавиш F12, Ctrl+Shift+I, Ctrl+U
+document.addEventListener('keydown', function(event) {
+    if (event.keyCode === 123 || // F12
+        (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+        (event.ctrlKey && event.keyCode === 85)) { // Ctrl+U
+        event.preventDefault();
+    }
+});
+</script>
+
+<style>
+/* Отключение выделения текста */
+body, html {
+    -webkit-user-select: none; /* Chrome, Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE, Edge */
+    user-select: none;         /* Все современные браузеры */
+}
+
+/* Отключение загрузки изображений */
+img {
+    pointer-events: none; /* Блокировка взаимодействия с изображениями */
+}
+</style>

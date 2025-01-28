@@ -1,0 +1,9 @@
+name = "protect-web-1"
+type = "theme_app_extension"
+
+[[extensions]]
+name = "Protection Embed"
+handle = "protection-embed"
+type = "theme"
+target = "online_store"
+file = "blocks/protection-embed.liquid"
